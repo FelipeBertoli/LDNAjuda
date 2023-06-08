@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<meta charset="UTF-8">
+<link href="css/style2.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="css/icon" href="favicon.png">
+<title>LDNTech Ajuda</title>
+
+<header>
+    <img src="css/logo.png" alt="LDNTech" style="  width: auto; height: 60px;">
+    <div class="navigation-bar">
+        <div id="navigation-container">
+            <ul>
+                <li><button class="menu"><a href="https://ldntech.com.br">← Voltar para o site</a></button></li>
+                <li><button class="menu"><a href="index.html">Downloads</a></button></li>
+                <li><button class="menu"><a href="#">Contato</a></button></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<body>
+    <h4 align="left"> ● CONTATO</h4>
+    <table cellpadding="7">
+        <tr>
+            <td rowspan="3">
+                <form id="retornoHTML">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input id="nome" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input id="email" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefone:</label>
+                        <input id="telefone" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Empresa:</label>
+                        <input id="empresa" type="text" class="form-control">
+                    </div>
+                    <button class="botao" onclick="enviar()" style="margin-top:20px">Enviar</button>
+                </form>
+
+    </table>
+</body>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 .col-md-6" style="color:white; padding: 10px; margin-top: 30px;">
+                LDNTECH AUTOMAÇÃO COMERCIAL E TECNOLOGIA LTDA <br>
+                CNPJ: 43.608.649/0001-00 <br>
+                Londrina/PR</div>
+            <div class="col  align-items-center"> <img src="css/icon.png" alt="LDNTech"
+                    style="height: 130px; width: auto;"></div>
+        </div>
+    </div>
+</footer>
+<script>
+    function enviar() {
+        var nome = document.getElementById('nome')
+        var nome = $('#nome').val();
+        var email = $('#email').val();
+        var telefone = $('#telefone').val();
+        var empresa = $('#empresa').val();
+
+        if (nome != '') {
+            if (email != '') {
+                if (telefone != '') {
+                    if (empresa != '') {
+                        alert('Enviado')
+                    } else {
+                        alert('Informe sua empresa');
+                    }
+                } else {
+                    alert('Informe seu telefone');
+                }
+            } else {
+                alert('Informe seu e-mail');
+            }
+        } else {
+            alert('Informe seu nome');
+        }
+   
+
+    /* construindo url */
+    var urlData = "&nome=" + nome +
+        "&email=" + email +
+        "&msg=" + msg;
+
+    /* Ajax */
+    $.ajax({
+        type: "POST",
+        url: "sendmail.php", /* endereço do script PHP */
+        async: true,
+        data: urlData, /* informa Url */
+        success: function (data) { /* sucesso */
+            $('#retornoHTML').html(data);
+        },
+        beforeSend: function () { /* antes de enviar */
+            $('.loading').fadeIn('fast');
+        },
+        complete: function () { /* completo */
+            $('.loading').fadeOut('fast'); //wow!
+        }
+    });
+    }
+</script>
+
+</html>

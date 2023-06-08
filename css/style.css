@@ -1,0 +1,161 @@
+* {
+  font-family: 'Segoe UI';
+}
+
+body{
+  padding-top: 150px;
+}
+
+img {
+  width: auto;
+  height: 60px;
+  margin-left: 15px;
+}
+
+/* Header */
+header {
+  background: #f7f7f7;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 12%;
+  box-shadow: 0px 0px 0px 40px rgb(0, 59, 148);
+  ;
+}
+
+#navigation-container {
+  width: 1200px;
+  height: 70px;
+}
+
+.navigation-bar {
+  height: 70px;
+  width: 100%;
+}
+
+.navigation-bar ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.navigation-bar li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline;
+}
+
+.navigation-bar li a {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  line-height: 30px;
+  padding: 5px 15px;
+
+}
+.navigation-bar li a:hover {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  line-height: 30px;
+  padding: 5px 15px;
+  opacity: 0.3;
+}
+
+.menu {
+  border-radius: 10px;
+  margin-top:15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: static;
+  display: inline-block;
+  outline: none;
+  background: rgb(0, 59, 148);
+  border: none;
+  align-items: center;
+}
+
+.menu:hover {
+  color: white;
+}
+
+
+/* Body */
+body {
+  margin-top: 150px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: 0px;
+  background-color: rgb(241, 241, 241);
+}
+
+table {
+  margin:20px;
+  margin-bottom: 10px;
+  margin-left: 23%;
+  top: 20%;
+  font-family: 'Segoe UI';
+  color: rgb(0, 0, 0);
+  background: rgb(194, 218, 255);
+  border: 10px hidden rgb(0, 0, 0);
+  padding: 10px 30px;
+  border-radius: 20px;
+  text-align: center;
+  border-collapse:collapse;
+}
+
+h4{
+  margin-left: 50px;
+}
+
+.roxo {
+  font-size: 15px;
+  background: rgb(0, 59, 148);
+  color: #fff;
+}
+
+
+.botao {
+  color: #fff;
+  border-radius: 40px;
+  padding: 10px 25px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: static;
+  display: inline-block;
+  outline: none;
+  background: rgb(0, 59, 148);
+  border: none;
+}
+
+.botao a {
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background: rgb(1, 38, 94);
+}
+/* footer */
+footer {
+  background: rgb(0, 59, 148);
+  position: static;
+  width: 100%;
+  margin-top: 5%;
+  right: 0;
+  box-shadow: 0px 0px 0px 10px rgb(0, 59, 148);
+  
+}
+
